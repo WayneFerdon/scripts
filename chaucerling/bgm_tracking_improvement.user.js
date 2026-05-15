@@ -134,6 +134,9 @@ function getTips (subject) {
       }
     }
     let ep_info = $('.load-epinfo:last', subject);
+    if(!ep_info || ep_info.length === 0){
+      return;
+    }
     return $(".tip:first", $(ep_info[0].rel));
   } catch (e) {
     console.log(e, subject);
@@ -403,6 +406,9 @@ GM_addStyle(`
   .infoWrapper_tv.disabled, .infoWrapper_book.disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+  #prgManagerMain.tinyModeWrapper .infoWrapperContainer {
+  grid-template-columns: 1fr;
   }
 `);
 
