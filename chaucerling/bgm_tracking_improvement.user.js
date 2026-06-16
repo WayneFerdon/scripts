@@ -8,6 +8,7 @@
 // @grant        GM_deleteValue
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @grant        GM_addStyle
 // ==/UserScript==
 
 /* jshint loopfunc:true */
@@ -57,9 +58,9 @@ const LS_SCOPE = 'BTI.extra_subjects';
 // };
 // var transaction = db.transaction("subjects", "readwrite");
 
-function GM_addStyle(style) {
-  $('head').append(`<style>${style}</style>`);
-}
+// function GM_addStyle(style) {
+//   $('head').append(`<style>${style}</style>`);
+// }
 
 const tasks = [changeLayout, i18n];
 //#region [超合金组件]首页按星期分组/排序(https://bangumi.tv/dev/app/1083/gadget/851)
